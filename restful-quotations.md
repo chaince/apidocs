@@ -7,8 +7,8 @@
 * Quotations are **PUBLIC** for everyone, no authentication required
 
 ## Versioning
-* API version must be specified in **EVERY REQUEST**, no default value
-* API Version should be set in HTTP Headers, as is: **`accept-version: v1`**, case sensitive
+* **API Version should be set in HTTP Headers, as is: `accept-version: v1`, case sensitive**
+* API version must be specified in **EVERY** request, no default value
 * `404 NotFound` will be thrown if API Version not set or wrong set
 
 
@@ -26,9 +26,6 @@
 GET /
 ```
 Root path. can be used as a ping
-
-**Parameters:**
-NONE
 
 **Response:**
 ```json
@@ -54,12 +51,12 @@ All pairs in market
 {
   "ceteos": {
     "base_precision": 1,
-    "code": "CET/EOS",
+    "full_code": "CET/EOS",
     "quote_precision": 4
   },
   "iqeos": {
     "base_precision": 1,
-    "code": "IQ/EOS",
+    "full_code": "IQ/EOS",
     "quote_precision": 4
   }
 }
@@ -82,10 +79,10 @@ All currencies in market
 
 **Response:**
 ```json
-{
+[
   "EOS",
   "CET"
-}
+]
 ```
 
 **Ratelimit:**
@@ -218,7 +215,8 @@ level=h4&last=1533715680&limit=10
     "t": 1533254400,
     "v": "3406255.0"
   }
-]```
+]
+```
 
 Key | Description
 ------------ | ------------
