@@ -64,7 +64,7 @@ All pairs in market
 
 Key | Description
 ------------ | ------------
-`code` | the full code of this pair
+`full_code` | the full code of this pair
 `base_precision` | precision of base currency
 `quote_precision` | precision of quote currency
 
