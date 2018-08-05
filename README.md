@@ -1,4 +1,4 @@
-# Documentations for Chaince API
+# API Documentations for Chaince
 
 
 Name | Description

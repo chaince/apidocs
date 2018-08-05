@@ -220,6 +220,7 @@ level=h4&last=1533715680&limit=10
 
 Key | Description
 ------------ | ------------
+`t` | time
 `o` | open
 `h` | high
 `l` | low
