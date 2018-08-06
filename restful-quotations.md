@@ -164,7 +164,7 @@ Key | Description
 ```
 GET /klines/{code}
 ```
-Ticker of a specified pair
+Klines of a specified pair
 
 **Resouces:**
 
@@ -175,7 +175,7 @@ Name | Description
 *Demo*
 
 ```
-GET /tickers/ceteos
+GET /klines/ceteos
 ```
 
 **Parameters:**
