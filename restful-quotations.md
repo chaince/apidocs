@@ -102,12 +102,16 @@ Tickers of all pairs
   "ceteos": {
     "change": "16.82%",
     "price": "0.0110",
-    "volume": "10325590.5"
+    "volume": "10325590.5",
+    "high": "0.0118",
+    "low": "0.0102"
   },
   "iqeos": {
     "change": "-3.37%",
     "price": "0.0035",
-    "volume": "131297013.1"
+    "volume": "131297013.1",
+    "high": "0.0040",
+    "low": "0.0032"
   },
 }
 ```
@@ -117,6 +121,8 @@ Key | Description
 `price` | current quote price
 `volume` | 24 hours trading volume
 `change` | 24 hours change in percent
+`high` | 24 hours highest price
+`low` | 24 hours lowest price
 
 **Ratelimit:**
 20 requests / 60 seconds
@@ -145,7 +151,9 @@ GET /tickers/ceteos
   "ceteos": {
     "change": "16.82%",
     "price": "0.0110",
-    "volume": "10325590.5"
+    "volume": "10325590.5",
+    "high": "0.0040",
+    "low": "0.0032"
   }
 }
 ```
@@ -155,6 +163,8 @@ Key | Description
 `price` | current quote price
 `volume` | 24 hours trading volume
 `change` | 24 hours change in percent
+`high` | 24 hours highest price
+`low` | 24 hours lowest price
 
 **Ratelimit:**
 30 requests / 60 seconds, per pair
