@@ -7,7 +7,7 @@
 Connect the websocket endpoint **wss://api.chaince.com/websocket**
 
 ### Bearer
-See [Authentication] (./authentication.md)
+See [Authentication](./authentication.md)
 
 ### Sent
 Sent a `join` request to server in json format
@@ -55,7 +55,7 @@ When your order involved in any trading, placed into orderbook, or cancelled, st
 ```json
 {
   "topic": "trading:cnc6666666666666",
-  "event": "pair:ceteos"
+  "event": "pair:ceteos",
   "payload": {
     "orders": [
       {

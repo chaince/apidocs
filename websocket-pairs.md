@@ -7,7 +7,7 @@
 Connect the websocket endpoint **wss://api.chaince.com/websocket**
 
 ### Bearer
-See [Authentication] (./authentication.md)
+See [Authentication](./authentication.md)
 
 ### Sent
 Sent a `join` request to server in json format
@@ -55,7 +55,7 @@ In your joined pair, when orderbook changed, including trading executed, order p
 ```json
 {
   "topic": "pair:ceteos",
-  "event": "report"
+  "event": "report",
   "payload": {
     "trades": [
       {

@@ -7,7 +7,7 @@
 Connect the websocket endpoint **wss://api.chaince.com/websocket**
 
 ### Bearer
-See [Authentication] (./authentication.md)
+See [Authentication](./authentication.md)
 
 ### Sent
 Sent a `join` request to server in json format
@@ -55,7 +55,7 @@ Ticker and 10 price levels each direction are pushed every 5 seconds
 ```json
 {
   "topic": "ticker:ceteos",
-  "event": "ticker"
+  "event": "ticker",
   "payload": {
     "price": "0.28",
     "change": "-12.68%",

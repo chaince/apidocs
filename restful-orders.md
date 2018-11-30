@@ -244,6 +244,7 @@ Name | Type | Required | Constraint | Description
 `client_order_id` | string | mutually_exclusive `3/5` | single client order id | i.e. `"my-order-1"`
 `client_order_ids` | list[string] | mutually_exclusive `4/5` | list of client order id | i.e. `["my-order-1", "my-order-2"]`
 `direction` | string | mutually_exclusive `5/5` | `"bid"` or `"ask"` | all orders in this direction
+
 **Mutaully Exclusive means one and only one parameter of the five above is required**
 
 *Demo*
@@ -318,6 +319,7 @@ Name | Type | Required | Constraint | Description
 ------------ | ------------ | ------------ | ------------ | ------------
 `order_ids` | string | mutually_exclusive `1/2` | comma separated | i.e. `"1,2,3"`
 `client_order_ids` | string | mutually_exclusive `2/2` | comma separated | i.e. `"my-order-1, my-order-2"`
+
 **Mutaully Exclusive means one and only one parameter of the two above is required**
 
 *Demo*

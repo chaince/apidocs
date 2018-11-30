@@ -1,10 +1,10 @@
 # API Authentication
 
 * `JWT` is used as authentication mechanism
-* `ed25519` is used as signing algorithm
+* **`ed25519`** is used as signing algorithm
 * Get your `api_key` and `secret_key` from [https://chaince.com/profile](https://chaince.com/profile)
 * The `api_key` is the user identification, **16** characters long
-* The `secret_key` is the ed25519 private key, **32** characters long
+* The `secret_key` is the **`ed25519` private key**, **32** characters long
 
 ## Payload
 
@@ -28,7 +28,7 @@ Key | Description
 Name | Value
 ------------ | ------------
 `payload` | `{"key": "cnc6666666666666", "iat": 1599999999}`
-`secret_key` | "CNC88888888888888888888888888888"
+`secret_key` | `"CNC88888888888888888888888888888"`
 
 will generate the `bearer`:
 
