@@ -1,96 +1,15 @@
 # Restful Public Quotations
 
-## Common
-* The base URI: **https://api.chaince.com**
-* **JSON** is used as returned data format along with HTTP status code `200`
-* **TEXT** string will be returned in case of exceptions with status `4XX` `5XX`
-* Quotations are **PUBLIC** for everyone, no authentication required
+## Endpoints
 
-## Versioning
-* **API Version should be set in HTTP Headers, as is: `accept-version: v1`, case sensitive**
-* API version must be specified in **EVERY** request, no default value
-* `404 NotFound` will be thrown if API Version not set or wrong set
+[Tickers](#tickers)
 
+[Ticker](#ticker)
 
-## Terminology
-* `base` means the currency that is the `quantity` of a pair
-* `quote` means the currency that is the `price` of a pair
-
-
-# Endpoints
-
-## Root / Ping
-
-### Root
-```
-GET /
-```
-Root path. can be used as a ping
-
-**Response:**
-```json
-{
-  "api": "chaince",
-  "version": "v1"
-}
-```
-
-**Ratelimit:**
-60 requests / 60 seconds
-
-## Market
-
-### Pairs in market
-```
-GET /market/pairs
-```
-All pairs in market
-
-**Response:**
-```json
-{
-  "ceteos": {
-    "base_precision": 1,
-    "full_code": "CET/EOS",
-    "quote_precision": 4
-  },
-  "iqeos": {
-    "base_precision": 1,
-    "full_code": "IQ/EOS",
-    "quote_precision": 4
-  }
-}
-```
-
-Key | Description
------------- | ------------
-`full_code` | the full code of this pair
-`base_precision` | precision of base currency
-`quote_precision` | precision of quote currency
-
-**Ratelimit:**
-10 requests / 60 seconds
-
-### Currencies in market
-```
-GET /market/currencies
-```
-All currencies in market
-
-**Response:**
-```json
-[
-  "EOS",
-  "CET"
-]
-```
-
-**Ratelimit:**
-10 requests / 60 seconds
+[Klines](#klines)
 
 ## Tickers
 
-### Tickers
 ```
 GET /tickers
 ```
@@ -100,18 +19,18 @@ Tickers of all pairs
 ```json
 {
   "ceteos": {
-    "change": "16.82%",
     "price": "0.0110",
-    "volume": "10325590.5",
+    "change": "16.82%",
     "high": "0.0118",
-    "low": "0.0102"
+    "low": "0.0102",
+    "volume": "10325590.5"
   },
   "iqeos": {
-    "change": "-3.37%",
     "price": "0.0035",
-    "volume": "131297013.1",
+    "change": "-3.37%",
     "high": "0.0040",
-    "low": "0.0032"
+    "low": "0.0032",
+    "volume": "131297013.1"
   },
 }
 ```
@@ -119,15 +38,15 @@ Tickers of all pairs
 Key | Description
 ------------ | ------------
 `price` | current quote price
-`volume` | 24 hours trading volume
 `change` | 24 hours change in percent
-`high` | 24 hours highest price
-`low` | 24 hours lowest price
+`high` | highest price in past 24 hours
+`low` | lowest price in past 24 hours
+`volume` | trading volume in past 24 hours
 
 **Ratelimit:**
 20 requests / 60 seconds
 
-### Ticker of a pair
+## Ticker
 ```
 GET /tickers/{code}
 ```
@@ -169,7 +88,7 @@ Key | Description
 **Ratelimit:**
 30 requests / 60 seconds, per pair
 
-## Kline / Candlestick
+## Klines
 
 ```
 GET /klines/{code}
@@ -190,12 +109,12 @@ GET /klines/ceteos
 
 **Parameters:**
 
-Name | Type | Required | Description
------------- | ------------ | ------------ | ------------
-`level` | string | no | One of `"m1", "m5", "m30", "h1", "h4", "d", "w"`, Default: `"d"` <br /> Abbrev: `m`: minute, `h`: hour, `d`: day, `w`: week
-`first` | long | no | The time of **first** kline, UTC, Unix timestamp, **WITHOUT** milliseconds
-`last` | long | no | The time of **last** kline, UTC, Unix timestamp, **WITHOUT** milliseconds
-`limit` | int | no | Scope: `1..500`, Default: `2`
+Name | Type | Required | Constraint | Description
+------------ | ------------ | ------------ | ------------ | ------------
+`level` | string | no | one of `"m1", "m5", "m30", "h1", "h4", "d", "w"`, <br /> default: `"d"` | abbrev: `m`: minute, `h`: hour, `d`: day, `w`: week
+`first` | long | no | UTC, Unix timestamp, **WITHOUT** milliseconds | the time of **first** kline
+`last` | long | no | UTC, Unix timestamp, **WITHOUT** milliseconds | the time of **last** kline
+`limit` | int | no | scope: `1..500`, default: `2` | max klines returned
 
 **If `first` and `last` are both set, `last` will be ignored**
 
@@ -203,6 +122,8 @@ Name | Type | Required | Description
 
 ```
 level=m1&first=1533715680
+```
+```
 level=h4&last=1533715680&limit=10
 ```
 
