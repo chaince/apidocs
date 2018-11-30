@@ -84,8 +84,16 @@ When your order involved in any trading, placed into orderbook, or cancelled, st
       }
     ],
     "accounts": {
-      "cet": {"available": "872785.6"},
-      "eos": {"available": "3587.9382"}
+      "cet": {
+        "available": "3298.7988",
+        "balance": "3100.7988",
+        "locked": "198.0"
+      },
+      "eos": {
+        "available": "832.6890",
+        "balance": "601.6890",
+        "locked": "231.0"
+      }
     }
   }
 ```
@@ -105,4 +113,6 @@ Key | Description
 
 Key | Description
 ------------ | ------------
-`available` | available in your currency account
+`balance` | total quantity in account, available + locked
+`available` | available in account, free to use
+`locked` | may be locked by ordering or withdrawal
