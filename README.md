@@ -8,18 +8,20 @@
 ## Websocket
 * The websocket URI: **wss://api.chaince.com/websocket**
 
+## Authentication
+[Authentication](./authentication.md)
+
 # Endpoints
 
-Name | Description
------------- | ------------ 
-[restful-market](./restful-market.md) | currencies and pairs in market 
-[restful-quotations](./restful-quotations.md) | tickers and klines
-[restful-orders](./restful-orders.md) | submit and cancel orders, active and today orders
-[restful-pairs](./restful-pairs.md) | orderbook, trades and ticker
-[websocket-trading](./websocket-trading.md) | orders and accounts involved in trading
-[websocket-pairs](./websocket-pairs.md) | trades, orderbook change for every trading
-[websocket-tickers](./websocket-tickers.md) | ticker and 10 levels orderbook
-[authentication](./authentication.md) | payload, signing and authentication
+Name | Auth | Description
+------------ | ------------ | ------------
+[restful-market](./restful-market.md) | Public | currencies and pairs in market
+[restful-quotations](./restful-quotations.md) | Public | tickers and klines
+[restful-orders](./restful-orders.md) | **Private** | submit and cancel orders, active and today orders
+[restful-pairs](./restful-pairs.md) | **Private** | orderbook, trades and ticker
+[websocket-trading](./websocket-trading.md) | **Private** | orders and accounts involved in trading
+[websocket-pairs](./websocket-pairs.md) | **Private** | trades, orderbook change for every trading
+[websocket-tickers](./websocket-tickers.md) | **Private** | ticker and 10 levels orderbook
 
 ## Root / Ping
 

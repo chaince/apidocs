@@ -3,7 +3,7 @@
 ## Authorization
 
 ### Bearer
-See [Authentication] (./authentication.md)
+See [Authentication](./authentication.md)
 
 ### Authorization
 Put the `Bearer` string `eyJhbG...` into http header `Authorization: Bearer eyJhbG...`
