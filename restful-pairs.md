@@ -10,17 +10,17 @@ Put the `Bearer` string `eyJhbG...` into http header `Authorization: Bearer eyJh
 
 ## Endpoints
 
-[Get orderbook](#get-orderbook)
+[Get depth](#get-depth)
 
 [Get trades](#get-trades)
 
 [Get ticker](#get-ticker)
 
-## Get orderbook
+## Get depth
 ```
-GET /pairs/{code}/orderbook
+GET /pairs/{code}/depth
 ```
-Get orderbook by pair code
+Get depth by pair code
 
 **Resouces:**
 
@@ -31,7 +31,7 @@ Name | Description
 *Demo*
 
 ```
-GET /pairs/ceteos/orderbook
+GET /pairs/ceteos/depth
 ```
 
 **Parameters:**
@@ -60,8 +60,8 @@ Name | Type | Required | Constraint | Description
 Key | Description
 ------------ | ------------
 `bsn` | orderbook serial number, +1 whenever orderbook changes
-`asks` | asks orders, aggregated by price level
-`bids` | bids orders, aggregated by price level
+`asks` | depth asks, aggregated by price level
+`bids` | depth bids, aggregated by price level
 `[price, quantity]` | price and quantity in a price level
 
 **Ratelimit:**

@@ -77,7 +77,7 @@ In your joined pair, when orderbook changed, including trading executed, order p
         "created_at": 1543398225959
       }
     ],
-    "orderbook": {
+    "depth": {
       "bids": [],
       "asks": [[0.28,-1], [0.29,-1]]
     },
@@ -99,10 +99,10 @@ Key | Description
 
 If no trades in this pushing, the value of key `"trades"` will be `[]`
 
-**Orderbook:**
+**Depth:**
 
 Key | Description
 ------------ | ------------
-`asks` | quantity change in price level asks
-`bids` | quantity change in price level bids
+`asks` | quantity change in depth asks
+`bids` | quantity change in depth bids
 `[price, change]` | price, quantity change

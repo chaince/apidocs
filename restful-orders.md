@@ -239,13 +239,13 @@ PUT /orders/ceteos/cancel
 
 Name | Type | Required | Constraint | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-`order_id` | integer | mutually_exclusive `1/5` | single order id | i.e. `16`
-`order_ids` | list[integer] | mutually_exclusive `2/5` | list of order id | i.e. `[12, 13]`
-`client_order_id` | string | mutually_exclusive `3/5` | single client order id | i.e. `"my-order-1"`
-`client_order_ids` | list[string] | mutually_exclusive `4/5` | list of client order id | i.e. `["my-order-1", "my-order-2"]`
-`direction` | string | mutually_exclusive `5/5` | `"bid"` or `"ask"` | all orders in this direction
+`order_id` | integer | one_of `1/5` | single order id | i.e. `16`
+`order_ids` | list[integer] | one_of `2/5` | list of order id | i.e. `[12, 13]`
+`client_order_id` | string | one_of `3/5` | single client order id | i.e. `"my-order-1"`
+`client_order_ids` | list[string] | one_of `4/5` | list of client order id | i.e. `["my-order-1", "my-order-2"]`
+`direction` | string | one_of `5/5` | `"bid"` or `"ask"` | all orders in this direction
 
-**Mutaully Exclusive means one and only one parameter of the five above is required**
+**`one_of` means one and only one parameter of the five above is required**
 
 *Demo*
 
@@ -317,10 +317,10 @@ GET /orders/ceteos
 
 Name | Type | Required | Constraint | Description
 ------------ | ------------ | ------------ | ------------ | ------------
-`order_ids` | string | mutually_exclusive `1/2` | comma separated | i.e. `"1,2,3"`
-`client_order_ids` | string | mutually_exclusive `2/2` | comma separated | i.e. `"my-order-1, my-order-2"`
+`order_ids` | string | one_of `1/2` | comma separated | i.e. `"1,2,3"`
+`client_order_ids` | string | one_of `2/2` | comma separated | i.e. `"my-order-1, my-order-2"`
 
-**Mutaully Exclusive means one and only one parameter of the two above is required**
+**`one_of` means one and only one parameter of the two above is required**
 
 *Demo*
 

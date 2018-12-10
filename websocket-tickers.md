@@ -50,7 +50,7 @@ Key | Type | Value | Description
 
 ## Stream
 
-Ticker and 10 price levels each direction are pushed every 5 seconds
+Ticker and 10 levels depth each direction are pushed every 5 seconds
 
 ```json
 {
@@ -84,6 +84,6 @@ Key | Description
 `high` | highest price in past 24 hours
 `low` | lowest price in past 24 hours
 `volume` | trading volume in past 24 hours
-`asks` | orderbook asks of 10 price levels
-`bids` | orderbook bids of 10 price levels
+`asks` | depth asks of 10 price levels
+`bids` | depth bids of 10 price levels
 `[price, quantity]` | price and quantity in a price level

@@ -19,10 +19,10 @@ Name | Auth | Description
 [restful-quotations](./restful-quotations.md) | Public | tickers and klines
 [restful-orders](./restful-orders.md) | **Private** | submit and cancel orders, active and today orders
 [restful-accounts](./restful-accounts.md) | **Private** | asset in accounts
-[restful-pairs](./restful-pairs.md) | **Private** | orderbook, trades and ticker
+[restful-pairs](./restful-pairs.md) | **Private** | depth, trades and ticker
 [websocket-trading](./websocket-trading.md) | **Private** | orders and accounts involved in trading
-[websocket-pairs](./websocket-pairs.md) | **Private** | trades, orderbook change for every trading
-[websocket-tickers](./websocket-tickers.md) | **Private** | ticker and 10 levels orderbook
+[websocket-pairs](./websocket-pairs.md) | **Private** | trades, depth change for every trading
+[websocket-tickers](./websocket-tickers.md) | **Private** | ticker and 10 levels depth
 
 ## Root / Ping
 
