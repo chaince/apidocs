@@ -19,14 +19,18 @@ Tickers of all pairs
 ```json
 {
   "ceteos": {
+    "base_contract": "eosiochaince",
     "price": "0.0110",
+    "code": "CET/EOS",
     "change": "16.82%",
     "high": "0.0118",
     "low": "0.0102",
     "volume": "10325590.5"
   },
   "iqeos": {
+    "base_contract": "everipediaiq",
     "price": "0.0035",
+    "code": "IQ/EOS",
     "change": "-3.37%",
     "high": "0.0040",
     "low": "0.0032",
@@ -37,7 +41,9 @@ Tickers of all pairs
 
 Key | Description
 ------------ | ------------
+`base_contract` | contract address of base currency
 `price` | current quote price
+`code` | full code
 `change` | 24 hours change in percent
 `high` | highest price in past 24 hours
 `low` | lowest price in past 24 hours

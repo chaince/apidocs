@@ -10,13 +10,13 @@ All pairs in market
 ```json
 {
   "ceteos": {
-    "base_contract_address": "eosiochaince",
+    "base_contract": "eosiochaince",
     "base_precision": 1,
     "full_code": "CET/EOS",
     "quote_precision": 4
   },
   "iqeos": {
-    "base_contract_address": "everipediaiq",
+    "base_contract": "everipediaiq",
     "base_precision": 1,
     "full_code": "IQ/EOS",
     "quote_precision": 4
@@ -27,7 +27,7 @@ All pairs in market
 Key | Description
 ------------ | ------------
 `full_code` | the full code of this pair
-`base_contract_address` | contract address of base currency
+`base_contract` | contract address of base currency
 `base_precision` | precision of base currency
 `quote_precision` | precision of quote currency
 
