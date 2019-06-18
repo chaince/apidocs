@@ -4,7 +4,7 @@
 
 ### Connect
 
-Connect the websocket endpoint **wss://api.chaince.com/websocket**
+Connect the websocket endpoint **wss://api.hoo.com/websocket**
 
 ### Bearer
 See [Authentication](./authentication.md)

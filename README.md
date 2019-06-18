@@ -1,12 +1,12 @@
-# API Documentations for Chaince
+# API Documentations for api.hoo.com
 
 ## Restful
-* The base restful URI: **https://api.chaince.com**
+* The base restful URI: **https://api.hoo.com**
 * **JSON** is used as returned data format along with HTTP status code `200`
 * **JSON {"error": "xxx"}** will be returned in case of exceptions with status `4XX` `5XX`
 
 ## Websocket
-* The websocket URI: **wss://api.chaince.com/websocket**
+* The websocket URI: **wss://api.hoo.com/websocket**
 
 ## Authentication
 [Authentication](./authentication.md)
@@ -34,7 +34,7 @@ Root path. can be used as a ping
 **Response:**
 ```json
 {
-  "api": "chaince",
+  "api": "hoo.com",
   "version": "v1"
 }
 ```

@@ -2,7 +2,7 @@
 
 * `JWT` is used as authentication mechanism
 * **`ed25519`** is used as signing algorithm
-* Get your `api_key` and `secret_key` from [https://chaince.com/profile](https://chaince.com/profile)
+* Get your `api_key` and `secret_key` from hoo.com
 * The `api_key` is the user identification, **16** characters long
 * The `secret_key` is the **`ed25519` private key**, **32** characters long
 
