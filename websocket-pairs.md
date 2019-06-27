@@ -79,7 +79,7 @@ In your joined pair, when orderbook changed, including trading executed, order p
     ],
     "depth": {
       "bids": [],
-      "asks": [[0.28,-1], [0.29,-1]]
+      "asks": [[0.28,"0"], [0.29,"718.0"]]
     },
     "bsn": 129
   }
@@ -103,6 +103,6 @@ If no trades in this pushing, the value of key `"trades"` will be `[]`
 
 Key | Description
 ------------ | ------------
-`asks` | quantity change in depth asks
-`bids` | quantity change in depth bids
-`[price, change]` | price, quantity change
+`asks` | price and quantity in depth asks
+`bids` | price and quantity in depth bids
+`[price, quantity]` | price, quantity after changed, "0" means this price level should be removed
