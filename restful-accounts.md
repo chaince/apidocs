@@ -94,3 +94,34 @@ Key | Description
 
 **Ratelimit:**
 10 requests / 60 seconds, per currency
+
+## Get all accounts
+```
+GET /accounts/currencies
+```
+Get all currencies accounts
+
+**Response:**
+```json
+{
+  "cet": {
+    "available": "3298.7988",
+    "balance": "3100.7988",
+    "locked": "198.0"
+  },
+  "eos": {
+    "available": "107.5360",
+    "balance": "90.5100",
+    "locked": "17.0260"
+  }
+}
+```
+
+Key | Description
+------------ | ------------
+`balance` | total quantity in account, available + locked
+`available` | available in account, free to use
+`locked` | may be locked by order or withdrawal
+
+**Ratelimit:**
+240 requests / 60 seconds
