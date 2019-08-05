@@ -35,3 +35,9 @@ will generate the `bearer`:
 ```
 eyJhbGciOiJFZDI1NTE5IiwidHlwIjoiSldUIn0.eyJpYXQiOjE1OTk5OTk5OTksImtleSI6ImNuYzY2NjY2NjY2NjY2NjYifQ.RJzhQwRI6g0YZg-Mh201G7aEGcpxm8vN8wf-rgpK6UySeMKRgUHzZV6WLxc93PptrKNb4CLW8XQo48OYR-stDw
 ```
+
+## Examples
+
+Author | Languages
+------------ | ------------
+[Lucien Song](https://github.com/LucienSong/Ed25519/blob/master/Ed25519.go)|[Golang](https://github.com/LucienSong/Ed25519/blob/master/Ed25519.go)
